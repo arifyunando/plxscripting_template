@@ -1,0 +1,57 @@
+Identification    : Sand
+SoilModel         : Hardening Soil
+general: 
+    # Unit Weights
+    gammaUnsat        : 17
+    gammaSat          : 18
+    
+    # Material Set
+    DrainageType      : Drained
+    # Colour            : 15262369 
+    nInit             : .5
+    eInit             : .3333
+
+mechanical: 
+    # Stiffness (Compulsory!)
+    E50Ref            : 1.5e+4
+    EURRef            : 4.5e+4
+
+    # Stiffness (Optional)
+    EOedRef           : 15_000
+    nuUR              : 0.2
+    PowerM            : 0.5 
+    pRef              : 100 
+
+
+    # Strength (Required at least one)
+    cRef              : 0 
+    phi               : 30 
+    # cInc              : 0
+
+    # Strength (Optional)
+    psi               : 0 
+    # VerticalRef       : 1 
+
+
+    # Miscellaneous / Compulsory if 'UseDefaults' is false
+    UseDefaults       : true 
+    # K0NC              : 0.5
+    # RF                : 0.8 
+
+
+groundwater: 
+    GroundwaterClassificationType : Standard
+    # GroundwaterSoilClassStandard : Coarse
+    # ClayFraction                 : 10
+    # SiltFraction                 : 13
+
+interfaces: 
+    InterfaceStrengthDetermination : Rigid # Manual / Rigid
+
+    # If interfaces is Manual 
+    # Rinter            : 1
+
+initial:
+    POP               : 0   
+    OCR               : 1 
+
